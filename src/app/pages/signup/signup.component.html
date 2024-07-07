@@ -1,0 +1,47 @@
+<app-default-login-layout
+  title="Sign in and start today!"
+  primaryBtnText="Singup Now"
+  secondaryBtnText="Login Now"
+  (submit)="submit()"
+  (navigate)="navigate()"
+  [disablePrimaryBtn]="!signupForm.valid"
+>
+
+<form [formGroup]="signupForm">
+  <app-imput-primary
+      formControlName = "name"
+      formName="name"
+      type="text"
+      label="Your name"
+      placeholder="Mr Dear"
+  >
+      <img src="people.svg">
+  </app-imput-primary>
+  <app-imput-primary
+      formControlName = "email"
+      formName="email"
+      type="email"
+      label="Email"
+      placeholder="mrdear@example.com"
+  >
+      <img src="message.svg">
+  </app-imput-primary>
+  <app-imput-primary
+      formControlName="password"
+      formName="password"
+      type="password"
+      label="Your Password"
+>
+    <img src="password.svg">
+  </app-imput-primary>
+  <app-imput-primary
+      formControlName="passwordConfirm"
+      formName="passwordConfirm"
+      type="password"
+      label="Confirm your Password"
+>
+    <img src="password.svg">
+  </app-imput-primary>
+
+</form>
+</app-default-login-layout>
